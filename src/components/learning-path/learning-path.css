@@ -1,0 +1,446 @@
+.learning {
+  width: 100%;
+  padding: 80px 0 180px;
+}
+
+.learning-container {
+  width: min(1200px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.learning-content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 60px;
+
+  margin-top: 70px;
+}
+
+.learning-content p {
+  max-width: 600px;
+
+  color: #bdc1ca;
+
+  font-size: 1rem;
+  line-height: 1.8;
+
+  opacity: 0.7;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.learning-button {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 25px;
+
+  padding: 16px 0;
+
+  background: transparent;
+
+  border: none;
+  border-bottom: 1px solid #182129;
+
+  color: #bdbbab;
+
+  font-family: inherit;
+  font-size: 0.75rem;
+
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+
+  cursor: pointer;
+
+  transition: gap 0.3s ease, border-color 0.3s ease;
+}
+
+.learning-button:hover {
+  gap: 35px;
+
+  border-color: #bdbbab;
+}
+
+.learning-button span:last-child {
+  font-size: 1rem;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.learning-modal {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+
+  background: rgba(6, 11, 15, 0.88);
+
+  backdrop-filter: blur(8px);
+
+  animation: modalBackground 0.3s ease;
+}
+
+.learning-modal-content {
+  width: min(900px, 100%);
+  max-height: min(800px, 90vh);
+
+  display: flex;
+  flex-direction: column;
+
+  background: #0b1116;
+
+  border: 1px solid #182129;
+
+  animation: modalOpen 0.35s ease;
+}
+
+/* =========================
+   MODAL HEADER
+========================= */
+
+.learning-modal-header {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding: 35px 40px;
+
+  border-bottom: 1px solid #182129;
+}
+
+.learning-modal-header > div > span {
+  display: block;
+
+  color: #bdbbab;
+
+  font-size: 0.65rem;
+
+  letter-spacing: 0.2em;
+
+  opacity: 0.5;
+
+  margin-bottom: 12px;
+}
+
+.learning-modal-header h2 {
+  color: #bdbbab;
+
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+
+  font-weight: 400;
+
+  letter-spacing: -0.03em;
+}
+
+/* =========================
+   CLOSE
+========================= */
+
+.learning-close {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+
+  border: 1px solid #182129;
+
+  color: #bdc1ca;
+
+  font-family: inherit;
+
+  font-size: 1.5rem;
+
+  font-weight: 300;
+
+  cursor: pointer;
+
+  transition: border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.learning-close:hover {
+  border-color: #bdbbab;
+
+  color: #ffffff;
+
+  transform: rotate(90deg);
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.learning-timeline {
+  overflow-y: auto;
+
+  padding: 20px 40px 50px;
+}
+
+/* Scrollbar */
+
+.learning-timeline::-webkit-scrollbar {
+  width: 5px;
+}
+
+.learning-timeline::-webkit-scrollbar-track {
+  background: #080d11;
+}
+
+.learning-timeline::-webkit-scrollbar-thumb {
+  background: #263039;
+}
+
+.learning-timeline::-webkit-scrollbar-thumb:hover {
+  background: #bdbbab;
+}
+
+/* =========================
+   ITEM
+========================= */
+
+.learning-item {
+  display: grid;
+
+  grid-template-columns: 60px 20px 1fr;
+
+  gap: 20px;
+
+  min-height: 180px;
+}
+
+/* =========================
+   NUMBER
+========================= */
+
+.learning-item-number {
+  padding-top: 5px;
+
+  color: #bdbbab;
+
+  font-size: 0.7rem;
+
+  letter-spacing: 0.12em;
+
+  opacity: 0.45;
+}
+
+/* =========================
+   LINE
+========================= */
+
+.learning-item-line {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+}
+
+.learning-item-line::before {
+  content: "";
+
+  position: absolute;
+
+  top: 10px;
+  bottom: -10px;
+
+  width: 1px;
+
+  background: #182129;
+}
+
+.learning-item:last-child .learning-item-line::before {
+  display: none;
+}
+
+.learning-item-line span {
+  position: relative;
+
+  z-index: 2;
+
+  width: 8px;
+  height: 8px;
+
+  margin-top: 7px;
+
+  border-radius: 50%;
+
+  background: #bdbbab;
+
+  box-shadow: 0 0 0 5px #0b1116;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.learning-item-content {
+  padding-bottom: 55px;
+}
+
+.learning-item-content h3 {
+  color: #bdbbab;
+
+  font-size: 1.5rem;
+
+  font-weight: 400;
+
+  margin-bottom: 15px;
+}
+
+.learning-item-content p {
+  max-width: 620px;
+
+  color: #bdc1ca;
+
+  font-size: 0.9rem;
+
+  line-height: 1.8;
+
+  opacity: 0.7;
+
+  margin-bottom: 20px;
+}
+
+/* =========================
+   TAGS
+========================= */
+
+.learning-technologies {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+.learning-technologies span {
+  padding: 6px 10px;
+
+  border: 1px solid #182129;
+
+  color: #bdc1ca;
+
+  font-size: 0.65rem;
+
+  letter-spacing: 0.04em;
+
+  opacity: 0.7;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes modalBackground {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalOpen {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+  .learning {
+    padding: 60px 0 120px;
+  }
+
+  .learning-container {
+    width: calc(100% - 40px);
+  }
+
+  .learning-content {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 35px;
+
+    margin-top: 50px;
+  }
+
+  .learning-button {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+
+  .learning-modal {
+    padding: 15px;
+  }
+
+  .learning-modal-content {
+    max-height: calc(100vh - 30px);
+  }
+
+  .learning-modal-header {
+    padding: 25px 20px;
+  }
+
+  .learning-timeline {
+    padding: 20px 20px 40px;
+  }
+
+  .learning-item {
+    grid-template-columns: 35px 15px 1fr;
+
+    gap: 12px;
+  }
+
+  .learning-item-content {
+    padding-bottom: 45px;
+  }
+
+  .learning-item-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .learning-item-content p {
+    font-size: 0.85rem;
+  }
+}

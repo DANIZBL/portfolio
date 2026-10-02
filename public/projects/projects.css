@@ -1,0 +1,306 @@
+.projects {
+  width: 100%;
+  padding: 180px 0;
+}
+
+.projects-container {
+  width: min(1200px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.section-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+
+  margin-bottom: 100px;
+}
+
+.section-heading > span {
+  color: #bdbbab;
+
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+
+  opacity: 0.5;
+}
+
+.section-heading p {
+  color: #bdbbab;
+
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+
+  margin-bottom: 15px;
+
+  opacity: 0.6;
+}
+
+.section-heading h2 {
+  color: #bdbbab;
+
+  font-size: clamp(2rem, 4vw, 3.5rem);
+
+  font-weight: 400;
+
+  letter-spacing: -0.03em;
+}
+
+/* =========================
+   PROJECT LIST
+========================= */
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+/* =========================
+   PROJECT
+========================= */
+
+.project {
+  display: grid;
+
+  grid-template-columns: 1.2fr 0.8fr;
+
+  gap: 40px;
+
+  align-items: center;
+}
+
+.project-reverse {
+  grid-template-columns: 0.8fr 1.2fr;
+}
+
+.project-reverse .project-image {
+  order: 2;
+}
+
+.project-reverse .project-content {
+  order: 1;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.project-image {
+  width: 100%;
+  height: 500px;
+
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  filter: saturate(0.75);
+
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.project:hover .project-image img {
+  transform: scale(1.03);
+
+  filter: saturate(1);
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.project-content {
+  max-width: 450px;
+}
+
+.project-number {
+  display: block;
+
+  color: #bdbbab;
+
+  font-size: 0.7rem;
+
+  letter-spacing: 0.15em;
+
+  opacity: 0.45;
+
+  margin-bottom: 20px;
+}
+
+.project-content h3 {
+  color: #bdbbab;
+
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+
+  line-height: 1.05;
+
+  font-weight: 400;
+
+  letter-spacing: -0.03em;
+
+  margin-bottom: 25px;
+}
+
+.project-content p {
+  color: #bdc1ca;
+
+  font-size: 0.95rem;
+
+  line-height: 1.8;
+
+  opacity: 0.75;
+
+  margin-bottom: 30px;
+}
+
+/* =========================
+   TECHNOLOGIES
+========================= */
+
+.project-technologies {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-bottom: 35px;
+}
+
+.project-technologies span {
+  color: #bdc1ca;
+
+  border: 1px solid #182129;
+
+  padding: 7px 12px;
+
+  font-size: 0.7rem;
+
+  letter-spacing: 0.05em;
+
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.project-technologies span:hover {
+  border-color: #bdbbab;
+
+  color: #bdbbab;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+.project-links {
+  display: flex;
+
+  gap: 25px;
+}
+
+.project-links a {
+  color: #bdbbab;
+
+  font-size: 0.75rem;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+
+  position: relative;
+
+  padding-bottom: 5px;
+}
+
+.project-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 1px;
+
+  background: #bdbbab;
+
+  transition: width 0.3s ease;
+}
+
+.project-links a:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .projects {
+    padding: 120px 0;
+  }
+
+  .projects-container {
+    width: calc(100% - 40px);
+  }
+
+  .projects-list {
+    gap: 100px;
+  }
+
+  .project,
+  .project-reverse {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .project-reverse .project-image,
+  .project-reverse .project-content {
+    order: initial;
+  }
+
+  .project-image {
+    height: 400px;
+  }
+
+  .project-content {
+    max-width: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects {
+    padding: 100px 0;
+  }
+
+  .section-heading {
+    gap: 15px;
+
+    margin-bottom: 60px;
+  }
+
+  .section-heading h2 {
+    font-size: 2rem;
+  }
+
+  .project-image {
+    height: 280px;
+  }
+
+  .project-content h3 {
+    font-size: 1.8rem;
+  }
+}
