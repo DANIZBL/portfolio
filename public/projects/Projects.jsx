@@ -4,20 +4,20 @@ const projects = [
   {
     title: "Mates Paraná",
     description:
-      "E-commerce desarrollado para la venta de mates y accesorios, con catálogo, carrito y proceso de compra.",
+      "E-commerce desarrollado para la venta de mates y accesorios, con catálogo, carrito, proceso de compra y un editor estilo canva para realizar diseños personalizados",
     technologies: ["JavaScript", "HTML", "CSS", "API"],
     image: "/projects/mates_parana.webp",
     github: "#",
-    demo: "#",
+    demo: "https://matesparana.com.ar/",
   },
   {
-    title: "Mona Studio",
+    title: "MonaStudio",
     description:
-      "Landing page enfocada en mostrar trabajos, servicios, galerías y contenido visual.",
+      "E-commerce desarrollado para la venta de cosmeticos y servicios de belleza facial, con catálogo, carrito, proceso de compra.",
     technologies: ["HTML", "CSS", "JavaScript"],
     image: "/projects/mona.webp",
     github: "#",
-    demo: "#",
+    demo: "https://mona-s.netlify.app/",
   },
   {
     title: "Sistema de Control de Cuotas",
@@ -35,10 +35,7 @@ function Projects() {
     <section className="projects" id="proyectos">
       <div className="projects-container">
         <div className="section-heading">
-          <span>02</span>
-
           <div>
-            <p>TRABAJO</p>
             <h2>Proyectos seleccionados</h2>
           </div>
         </div>
@@ -54,8 +51,6 @@ function Projects() {
               </div>
 
               <div className="project-content">
-                <span className="project-number">0{index + 1}</span>
-
                 <h3>{project.title}</h3>
 
                 <p>{project.description}</p>

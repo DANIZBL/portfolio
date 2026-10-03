@@ -1,48 +1,63 @@
 import { useEffect, useState } from "react";
 import "./learning-path.css";
+import certificateImage from "../../assets/imagenes/certificado.webp";
 
 const learningPath = [
   {
     year: "01",
-    title: "Primeros pasos",
+    title: "Arte y Diseño",
     description:
-      "Comencé mi recorrido en el desarrollo web aprendiendo los fundamentos de HTML y CSS.",
-    technologies: ["HTML", "CSS"],
+      "Mi interés por el desarrollo Front-end comenzó mucho antes de escribir mi primera línea de código. Desde joven me apasionaron el arte y la tecnología, explorando conceptos como teoría del color, composición visual e ilustración digital.",
+    technologies: [
+      "Teoría del color",
+      "Composición visual",
+      "Ilustración digital",
+      "Photoshop",
+    ],
   },
   {
     year: "02",
-    title: "JavaScript",
+    title: "Videojuegos y Creatividad Digital",
     description:
-      "Profundicé en JavaScript para aprender a crear interfaces dinámicas, manejar eventos y trabajar con datos.",
-    technologies: ["JavaScript", "DOM", "APIs"],
+      "Mi pasión por los videojuegos despertó una gran curiosidad por entender cómo se construyen las experiencias digitales. El diseño de personajes, los entornos interactivos y el arte digital me acercaron cada vez más al mundo de la programación y el desarrollo de software.",
+    technologies: [
+      "Videojuegos",
+      "Diseño digital",
+      "Creatividad",
+      "Arte digital",
+    ],
   },
   {
     year: "03",
-    title: "Desarrollo de proyectos",
+    title: "Primeros pasos en Programación",
     description:
-      "Comencé a aplicar lo aprendido en proyectos reales, trabajando en interfaces, funcionalidades y consumo de APIs.",
-    technologies: ["JavaScript", "REST API", "Git"],
+      "En la Facultad de Ciencias y Tecnologías di mis primeros pasos en la lógica de programación y resolución de problemas. Allí comencé a comprender conceptos fundamentales como algoritmos, estructuras de control y pensamiento lógico, sentando las bases de mi formación como desarrollador.",
+    technologies: [
+      "Algoritmos",
+      "Estructuras de control",
+      "Lógica de programación",
+    ],
   },
   {
     year: "04",
-    title: "React",
+    title: "Desarrollo Web",
     description:
-      "Incorporé React para desarrollar aplicaciones más estructuradas, reutilizables y escalables.",
-    technologies: ["React", "Vite", "Componentes"],
+      "Más adelante realicé una formación específica en desarrollo web donde aprendí tecnologías como HTML, CSS, JavaScript, Sass y Gulp. Durante esta etapa desarrollé mis primeros proyectos completos y descubrí mi interés por la creación de interfaces modernas, rápidas y enfocadas en la experiencia del usuario.",
+    technologies: ["HTML", "CSS", "JavaScript", "Sass", "Gulp"],
   },
   {
     year: "05",
-    title: "TypeScript",
+    title: "Certificación obtenida",
     description:
-      "Comencé a trabajar con TypeScript para mejorar la organización del código y detectar errores durante el desarrollo.",
-    technologies: ["TypeScript", "React"],
+      "Como parte de mi formación en desarrollo web obtuve la certificación como Desarrollador Web Front-End, consolidando los conocimientos adquiridos durante este proceso.",
+    technologies: ["Desarrollador Web Front-End"],
   },
   {
     year: "06",
-    title: "Desarrollo profesional",
+    title: "Aprendizaje Continuo",
     description:
-      "Actualmente continúo desarrollando proyectos reales, aprendiendo nuevas herramientas y mejorando constantemente mis habilidades.",
-    technologies: ["React", "TypeScript", "GitHub", "IA"],
+      "Actualmente continúo ampliando mis conocimientos porque considero que la tecnología evoluciona constantemente y siempre existen nuevas herramientas por descubrir. Exploro tecnologías modernas, metodologías de trabajo e inteligencia artificial para optimizar procesos, mejorar mis proyectos y seguir creciendo profesionalmente como desarrollador Front-End.",
+    technologies: ["React", "TypeScript", "IA", "GitHub"],
   },
 ];
 
@@ -151,6 +166,21 @@ function LearningPath() {
                         <span key={technology}>{technology}</span>
                       ))}
                     </div>
+
+                    {item.year === "05" && (
+                      <a
+                        className="learning-certificate"
+                        href={certificateImage}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="Ver certificado en tamaño completo"
+                      >
+                        <img
+                          src={certificateImage}
+                          alt="Certificado de Desarrollador Web Front-End"
+                        />
+                      </a>
+                    )}
                   </div>
                 </article>
               ))}

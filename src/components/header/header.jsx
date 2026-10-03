@@ -16,9 +16,7 @@ function Header() {
         </div>
 
         <div className="hero-info">
-          <p className="hero-label">PORTFOLIO</p>
-
-          <h1>Daniel</h1>
+          <h1>Daniel Zabala</h1>
 
           <h2>Frontend Developer</h2>
 
@@ -28,11 +26,19 @@ function Header() {
           </p>
 
           <div className="hero-links">
-            <a href="#" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.linkedin.com/in/daniel-zabala-6a7271275/"
+              target="_blank"
+              rel="noreferrer"
+            >
               LinkedIn
             </a>
 
-            <a href="#" target="_blank" rel="noreferrer">
+            <a
+              href="https://github.com/DANIZBL"
+              target="_blank"
+              rel="noreferrer"
+            >
               GitHub
             </a>
           </div>

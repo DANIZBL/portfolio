@@ -1,6 +1,6 @@
 .learning {
   width: 100%;
-  padding: 80px 0 180px;
+  padding: 80px 0 10px;
 }
 
 .learning-container {
@@ -443,4 +443,24 @@
   .learning-item-content p {
     font-size: 0.85rem;
   }
+}
+
+/* CERTIFICADO */
+.learning-certificate {
+  margin-top: 28px;
+  width: min(100%, 520px);
+}
+.learning-certificate img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(189, 187, 171, 0.2);
+  border-radius: 8px;
+  opacity: 0.9;
+  transition: transform 0.4s ease, opacity 0.4s ease, border-color 0.4s ease;
+}
+.learning-certificate img:hover {
+  opacity: 1;
+  transform: translateY(-4px);
+  border-color: rgba(189, 187, 171, 0.45);
 }

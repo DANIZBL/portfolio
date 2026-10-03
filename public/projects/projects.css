@@ -1,6 +1,7 @@
 .projects {
   width: 100%;
-  padding: 180px 0;
+  padding: 20px 0;
+  margin-bottom: 5rem;
 }
 
 .projects-container {
@@ -16,8 +17,7 @@
   display: flex;
   align-items: flex-start;
   gap: 30px;
-
-  margin-bottom: 100px;
+  margin-top: 10rem;
 }
 
 .section-heading > span {
@@ -123,20 +123,6 @@
 
 .project-content {
   max-width: 450px;
-}
-
-.project-number {
-  display: block;
-
-  color: #bdbbab;
-
-  font-size: 0.7rem;
-
-  letter-spacing: 0.15em;
-
-  opacity: 0.45;
-
-  margin-bottom: 20px;
 }
 
 .project-content h3 {
@@ -249,7 +235,7 @@
 
 @media (max-width: 900px) {
   .projects {
-    padding: 120px 0;
+    padding: 20px 0;
   }
 
   .projects-container {
@@ -264,7 +250,7 @@
   .project-reverse {
     grid-template-columns: 1fr;
 
-    gap: 40px;
+    gap: 10px;
   }
 
   .project-reverse .project-image,
@@ -283,13 +269,13 @@
 
 @media (max-width: 600px) {
   .projects {
-    padding: 100px 0;
+    padding: 5px 0;
   }
 
   .section-heading {
     gap: 15px;
 
-    margin-bottom: 60px;
+    margin-bottom: 10px;
   }
 
   .section-heading h2 {

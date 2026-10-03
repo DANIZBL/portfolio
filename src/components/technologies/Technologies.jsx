@@ -1,4 +1,5 @@
 import "./technologies.css";
+import coverImage from "../../assets/imagenes/cover.webp";
 
 const technologies = [
   {
@@ -29,7 +30,11 @@ const technologies = [
 
 function Technologies() {
   return (
-    <section className="technologies" id="tecnologias">
+    <section
+      className="technologies"
+      id="tecnologias"
+      style={{ backgroundImage: `url(${coverImage})` }}
+    >
       <div className="technologies-container">
         <div className="section-heading">
           <span>03</span>
